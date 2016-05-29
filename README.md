@@ -18,9 +18,15 @@ $ python go.py
 '21:35'
 
      o
+
   o     o
+
  o       o
+
 h         o
+
  o       o
+
   m     o
+
      o
