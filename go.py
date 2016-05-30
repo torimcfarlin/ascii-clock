@@ -1,25 +1,22 @@
 import click
 
-from ascii_clock.clock import time_to_clock, validate_time, TimeValidationError
+from ascii_clock.clock import TimeValidationError, AsciiClock
 
 
-def get_time():
-    time = None
-    while time is None:
-        time = str(input(''))
+def get_ascii_clock():
+    ascii_clock = None
+    while ascii_clock is None:
         try:
-            validate_time(time)
+            ascii_clock = AsciiClock(str(input('')))
         except TimeValidationError as e:
             print e.message
-            time = None
-    return time
+    return ascii_clock
 
 
 @click.command()
 def clock():
-    time = get_time()
-    clock = time_to_clock(time)
-    print clock
+    ascii_clock = get_ascii_clock()
+    print ascii_clock.to_clock_face()
 
 
 if __name__ == '__main__':
