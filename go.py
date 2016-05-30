@@ -8,7 +8,7 @@ def get_ascii_clock():
     ascii_clock = None
     while ascii_clock is None:
         try:
-            ascii_clock = AsciiClock(str(input('')))
+            ascii_clock = AsciiClock(raw_input(''))
         except TimeValidationError as e:
             print e.message
     return ascii_clock
