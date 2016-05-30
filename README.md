@@ -16,7 +16,7 @@ Run the go script:
 
 $ python go.py clock
 ```
-'21:35'
+21:35
 
      o
   o     o
